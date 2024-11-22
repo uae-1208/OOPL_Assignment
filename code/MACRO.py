@@ -8,3 +8,11 @@ IDLE = 0
 BLACK = 1
 WHITE = 2
 
+# 棋类
+GOBANG = 0
+GO = 1
+
+# 锁
+LOCKED = 0
+UNLOCKED = 1
+
