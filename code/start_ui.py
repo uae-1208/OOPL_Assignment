@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from PyQt5.QtGui import QIcon, QIntValidator
 from MACRO import *
+from go_ui import GoUI
 from gobang_ui import GobangUI
 from start_qt import Ui_StartWindow
 
@@ -43,7 +44,12 @@ class StartUI(QMainWindow, Ui_StartWindow):
             self.gobang_ui.setWindowTitle('五子棋双人对战')
             self.gobang_ui.show()
         elif current_chess == GO :
-            self.close()
-
+            # 围棋UI
+            self.go_ui = GoUI()
+            #设置标题图标
+            self.go_ui.setWindowIcon(QIcon('../designer/image/favicon.ico'))
+            #设置标题
+            self.go_ui.setWindowTitle('围棋双人对战')
+            self.go_ui.show()
 
 
