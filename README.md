@@ -1,3 +1,16 @@
+### v4
+* 在V3的基础上增加了黑白棋对战界面。此外，还新增了如下主要功能：
+  1. 增加**账号管理功能**。用户可以注册、登录账号，用户数据保存在本地的`usr_data`文件夹当中，一个用户一个文件夹。在登录界面和黑白棋对战界面中显示账号用户的相关信息。若不使用账号登录，用户也可以选择游客、一级AI和二级AI。
+  2. 增加**黑白棋AI落子功能**。玩家可以选择一级AI和二级AI，二级AI可以稳定战胜一级AI。
+  2. 增加**黑白棋录像与回放功能**。玩家在对局开始之前可以点击“保存录像”记录一整局的对战过程，录像保存在本地的`usr_data/records`文件夹当中。
+
+<img src="./readme_pic/pic5.png"  width="350" align="center"/> 
+<img src="./readme_pic/pic6.png"  width="350" align="center"/> 
+<img src="./readme_pic/pic7.png"  width="350" align="center"/> 
+<img src="./readme_pic/pic8.png"  width="600" align="center"/> 
+
+---
+
 ### v3
 * 在V2的基础上增加了围棋对战界面。围棋窗口与五子棋窗口不同之处有：
     1. 增加了**弃一手**按钮。用户可以放弃落子一回合。

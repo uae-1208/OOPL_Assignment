@@ -19,9 +19,10 @@ class LaBel(QLabel):
 
 # 五子棋UI
 class GobangUI(QMainWindow, Ui_GobangWindow):
-    def __init__(self, parent=None):
+    def __init__(self, parent=None, wc=None):
         super(GobangUI, self).__init__(parent)
         self.setupUi(self)
+        self.win_ctrl = wc
 
         # 鼠标相关
         self.setCursor(Qt.PointingHandCursor)                   # 鼠标变成手指形状
@@ -244,7 +245,7 @@ class GobangUI(QMainWindow, Ui_GobangWindow):
             return
 
         # 第一个参数必须是None，否则程序会崩
-        srcpath, type = QFileDialog.getOpenFileName(None, "文件导入", "chess.txt", "文本 (*.txt)")
+        srcpath, type = QFileDialog.getOpenFileName(None, "文件保存", "chess.txt", "文本 (*.txt)")
 
         if srcpath: # 判断文件是否被打开
             # 逐读取文件
@@ -366,3 +367,10 @@ class GobangUI(QMainWindow, Ui_GobangWindow):
             self.ChessCan.setStyleSheet("background-image: url(:/bg/image/blacks-removebg-preview.png);\n"
                                         "background-color: rgba(255, 255, 255, 0);")
             self.status = BLACK_PLAY
+
+
+
+    # 重写 closeEvent，当用户点击关闭按钮时自动返回开始录界面
+    def closeEvent(self, event):
+        self.win_ctrl.switch_win(GOBANG_2_START)
+

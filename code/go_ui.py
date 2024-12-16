@@ -4,14 +4,7 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QMainWindow, QLabel, QFileDialog, QMessageBox
 from MACRO import *
 from timer import GameTime
-from go_qt import Ui_GobangWindow
-import copy
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QMainWindow, QLabel, QFileDialog, QMessageBox
-from MACRO import *
-from timer import GameTime
-from go_qt import Ui_GobangWindow
+from go_qt import Ui_GoWindow
 
 
 # 重新定义Label类
@@ -26,10 +19,11 @@ class LaBel(QLabel):
 
 
 # 围棋UI
-class GoUI(QMainWindow, Ui_GobangWindow):
-    def __init__(self, parent=None):
+class GoUI(QMainWindow, Ui_GoWindow):
+    def __init__(self, parent=None, wc=None):
         super(GoUI, self).__init__(parent)
         self.setupUi(self)
+        self.win_ctrl = wc
 
         # 鼠标相关
         self.setCursor(Qt.PointingHandCursor)                   # 鼠标变成手指形状
@@ -297,7 +291,7 @@ class GoUI(QMainWindow, Ui_GobangWindow):
         self.status = END                           # 终止棋局
         self.result_label = LaBel(self)             # 结果标签
         self.result_label.setVisible(True)          # 图片可视
-        self.result_label.setScaledContents(True)   # 图片大小根据标签大小可变
+        self.result_label.setScaledContents(True)  # 图片大小根据标签大小可变
 
         if winner == BLACK_PLAY:
             print("黑子胜出")
@@ -403,7 +397,7 @@ class GoUI(QMainWindow, Ui_GobangWindow):
             return
 
         # 第一个参数必须是None，否则程序会崩
-        srcpath, type = QFileDialog.getOpenFileName(None, "文件导入", "chess.txt", "文本 (*.txt)")
+        srcpath, type = QFileDialog.getOpenFileName(None, "文件保存", "chess.txt", "文本 (*.txt)")
 
         if srcpath: # 判断文件是否被打开
             # 逐读取文件
@@ -525,3 +519,9 @@ class GoUI(QMainWindow, Ui_GobangWindow):
             self.ChessCan.setStyleSheet("background-image: url(:/bg/image/blacks-removebg-preview.png);\n"
                                         "background-color: rgba(255, 255, 255, 0);")
             self.status = BLACK_PLAY
+
+
+
+    # 重写 closeEvent，当用户点击关闭按钮时自动返回开始录界面
+    def closeEvent(self, event):
+        self.win_ctrl.switch_win(GO_2_START)

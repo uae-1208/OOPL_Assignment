@@ -1,0 +1,5 @@
+username: 康康
+account: 22222
+password: 1208
+AllPlays: 68
+WinPlays: 15

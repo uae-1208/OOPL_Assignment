@@ -1,9 +1,6 @@
 <RCC>
   <qresource prefix="bg">
-    <file>image/lost-removebg-preview.png</file>
-    <file>image/win-removebg-preview.png</file>
-    <file>image/avator2.png</file>
-    <file>image/bg.png</file>
+    <file>image/chessboard1.png</file>
     <file>image/whites-removebg-preview.png</file>
     <file>image/blacks-removebg-preview.png</file>
     <file>image/black.png</file>

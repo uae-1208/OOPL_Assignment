@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>GobangWindow</class>
- <widget class="QMainWindow" name="GobangWindow">
+ <class>GoWindow</class>
+ <widget class="QMainWindow" name="GoWindow">
   <property name="geometry">
    <rect>
     <x>0</x>

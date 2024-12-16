@@ -11,8 +11,31 @@ WHITE = 2
 # 棋类
 GOBANG = 0
 GO = 1
+OTHELLO = 2
 
 # 锁
 LOCKED = 0
 UNLOCKED = 1
+
+
+# 玩家类型
+USER = 0        # 账号用户
+VISTOR = 1      # 游客
+AI_L1 = 2       # 一级AI
+AI_L2 = 3       # 二级AI
+
+
+# 切换窗口的命令
+OPEN_LOGIN = 0
+LOGIN_2_REGISTER = 1
+LOGIN_2_START = 2
+REGISTER_2_LOGIN = 3
+START_2_LOGIN = 4
+START_2_OTHELLO = 5
+OTHELLO_2_START = 6
+START_2_GOBANG = 7
+GOBANG_2_START = 8
+START_2_GO = 9
+GO_2_START = 10
+
 

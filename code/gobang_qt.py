@@ -116,4 +116,4 @@ class Ui_GobangWindow(object):
         self.storeBtn.setText(_translate("GobangWindow", "保存棋局"))
         self.loadBtn.setText(_translate("GobangWindow", "导入棋局"))
         self.label_5.setText(_translate("GobangWindow", "用户可选操作"))
-import gobang_qrc_rc
+import chess_qrc_rc

@@ -11,14 +11,14 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_GobangWindow(object):
-    def setupUi(self, GobangWindow):
-        GobangWindow.setObjectName("GobangWindow")
-        GobangWindow.resize(1300, 1000)
-        GobangWindow.setMinimumSize(QtCore.QSize(1300, 1000))
-        GobangWindow.setMaximumSize(QtCore.QSize(1300, 1000))
-        GobangWindow.setStyleSheet("")
-        self.centralwidget = QtWidgets.QWidget(GobangWindow)
+class Ui_GoWindow(object):
+    def setupUi(self, GoWindow):
+        GoWindow.setObjectName("GoWindow")
+        GoWindow.resize(1300, 1000)
+        GoWindow.setMinimumSize(QtCore.QSize(1300, 1000))
+        GoWindow.setMaximumSize(QtCore.QSize(1300, 1000))
+        GoWindow.setStyleSheet("")
+        self.centralwidget = QtWidgets.QWidget(GoWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.chessboard = QtWidgets.QWidget(self.centralwidget)
         self.chessboard.setGeometry(QtCore.QRect(0, 0, 1000, 1000))
@@ -91,33 +91,33 @@ class Ui_GobangWindow(object):
         self.giveuptBtn = QtWidgets.QPushButton(self.centralwidget)
         self.giveuptBtn.setGeometry(QtCore.QRect(1150, 240, 71, 28))
         self.giveuptBtn.setObjectName("giveuptBtn")
-        GobangWindow.setCentralWidget(self.centralwidget)
+        GoWindow.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(GobangWindow)
-        QtCore.QMetaObject.connectSlotsByName(GobangWindow)
+        self.retranslateUi(GoWindow)
+        QtCore.QMetaObject.connectSlotsByName(GoWindow)
 
-    def retranslateUi(self, GobangWindow):
+    def retranslateUi(self, GoWindow):
         _translate = QtCore.QCoreApplication.translate
-        GobangWindow.setWindowTitle(_translate("GobangWindow", "MainWindow"))
-        self.textBrowser.setHtml(_translate("GobangWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        GoWindow.setWindowTitle(_translate("GoWindow", "MainWindow"))
+        self.textBrowser.setHtml(_translate("GoWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10.8pt;\"><br /></p></body></html>"))
-        self.label.setText(_translate("GobangWindow", "围棋（双人对战）"))
-        self.label_2.setText(_translate("GobangWindow", "步数：0"))
-        self.label_3.setText(_translate("GobangWindow", "时间：00:00"))
-        self.label_4.setText(_translate("GobangWindow", "当前棋手：黑棋"))
-        self.textBrowser_2.setHtml(_translate("GobangWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.label.setText(_translate("GoWindow", "围棋（双人对战）"))
+        self.label_2.setText(_translate("GoWindow", "步数：0"))
+        self.label_3.setText(_translate("GoWindow", "时间：00:00"))
+        self.label_4.setText(_translate("GoWindow", "当前棋手：黑棋"))
+        self.textBrowser_2.setHtml(_translate("GoWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10.8pt;\"><br /></p></body></html>"))
-        self.yeildBtn.setText(_translate("GobangWindow", "认输"))
-        self.restartBtn.setText(_translate("GobangWindow", "重新开始"))
-        self.retractBtn.setText(_translate("GobangWindow", "悔棋"))
-        self.storeBtn.setText(_translate("GobangWindow", "保存棋局"))
-        self.loadBtn.setText(_translate("GobangWindow", "导入棋局"))
-        self.label_5.setText(_translate("GobangWindow", "用户可选操作"))
-        self.giveuptBtn.setText(_translate("GobangWindow", "弃一手"))
-import gobang_qrc_rc
+        self.yeildBtn.setText(_translate("GoWindow", "认输"))
+        self.restartBtn.setText(_translate("GoWindow", "重新开始"))
+        self.retractBtn.setText(_translate("GoWindow", "悔棋"))
+        self.storeBtn.setText(_translate("GoWindow", "保存棋局"))
+        self.loadBtn.setText(_translate("GoWindow", "导入棋局"))
+        self.label_5.setText(_translate("GoWindow", "用户可选操作"))
+        self.giveuptBtn.setText(_translate("GoWindow", "弃一手"))
+import chess_qrc_rc

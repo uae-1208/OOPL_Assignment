@@ -1,0 +1,5 @@
+username: uae
+account: 11111
+password: 1208
+AllPlays: 90
+WinPlays: 45
