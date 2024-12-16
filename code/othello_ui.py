@@ -484,9 +484,3 @@ class OthelloUI(QMainWindow, Ui_OthelloWindow):
         # 检查是否按下空格键
         if event.key() == Qt.Key_Space:
             self.AImove()
-
-
-
-
-# 两个棋手不要登录同一个账号
-# 对局完成后没有更新选手战绩
